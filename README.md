@@ -12,5 +12,5 @@ systemctl stop ModemManager
 
 curl -fsSL get.docker.com | sh
 
-curl -sL "https://raw.githubusercontent.com/Kanga-Who/home-assistant/master/supervised-installer.sh" | bash -s -- -m raspberrypi4-64
+curl -sL "https://raw.githubusercontent.com/Kanga-Who/home-assistant/master/supervised-installer.sh" | bash -s -- -m raspberrypi4
 ```
