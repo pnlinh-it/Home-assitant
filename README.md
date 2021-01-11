@@ -14,3 +14,6 @@ curl -fsSL get.docker.com | sh
 
 curl -sL "https://raw.githubusercontent.com/Kanga-Who/home-assistant/master/supervised-installer.sh" | bash -s -- -m raspberrypi4
 ```
+
+# Blog
+- https://www.troyhunt.com/iot-unravelled-part-1-its-a-mess-but-then-theres-home-assistant/
