@@ -20,8 +20,8 @@ ssh root@<pi_ip_address> -i homeassistant
 
 
 ```sh
-sudo -i
-
+apt update && apt upgrade -y
+apt install sudo -y
 apt-get install -y software-properties-common apparmor-utils apt-transport-https ca-certificates curl dbus jq network-manager
 
 systemctl disable ModemManager
