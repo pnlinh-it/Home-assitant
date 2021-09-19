@@ -34,5 +34,24 @@ curl -fsSL get.docker.com | sh
 curl -sL "https://raw.githubusercontent.com/Kanga-Who/home-assistant/master/supervised-installer.sh" | bash -s -- -m raspberrypi4
 ```
 
+## Add Zigbee to MQTT
+- Add official Add-on: `Mosquitto broker`
+  - Update config
+```yml
+logins:
+  - username: plinh
+    password: passwd
+customize:
+  active: false
+  folder: mosquitto
+certfile: fullchain.pem
+keyfile: privkey.pem
+require_certificate: false
+
+```
+- Add: `https://github.com/zigbee2mqtt/hassio-zigbee2mqtt`
+
+![image](https://user-images.githubusercontent.com/11713395/133923949-2de714ec-0beb-45f8-b091-d6c451f719a5.png)
+
 # Blog
 - https://www.troyhunt.com/iot-unravelled-part-1-its-a-mess-but-then-theres-home-assistant/
