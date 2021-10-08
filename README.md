@@ -74,6 +74,19 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 ```
+### AutoSSH config
+```yml
+hostname: ha.pnlinh.me
+ssh_port: '2223'
+username: root
+remote_forwarding:
+  - ':80:172.17.0.1:8123'
+local_forwarding:
+  - ''
+other_ssh_options: '-o ExitOnForwardFailure=yes -v'
+monitor_port: '0'
+gatetime: '30'
+```
 # Blog
 - https://www.troyhunt.com/iot-unravelled-part-1-its-a-mess-but-then-theres-home-assistant/
 
