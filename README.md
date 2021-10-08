@@ -53,5 +53,27 @@ require_certificate: false
 
 ![image](https://user-images.githubusercontent.com/11713395/133923949-2de714ec-0beb-45f8-b091-d6c451f719a5.png)
 
+## Home assistant Config
+```yml
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.30.32.0/24
+    - 192.168.1.0/24
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+```
 # Blog
 - https://www.troyhunt.com/iot-unravelled-part-1-its-a-mess-but-then-theres-home-assistant/
+
