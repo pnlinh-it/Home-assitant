@@ -32,7 +32,17 @@ systemctl stop ModemManager
 curl -fsSL get.docker.com | sh
 
 curl -sL "https://raw.githubusercontent.com/Kanga-Who/home-assistant/master/supervised-installer.sh" | bash -s -- -m raspberrypi4
+
+sudo apt --fix-broken install
+sudo apt-get install udisks2 wget
+cd /usr/local/src
+sudo wget https://github.com/home-assistant/os-agent/releases/download/1.2.2/os-agent_1.2.2_linux_aarch64.deb
+dpkg -i os-agent_1.2.2_linux_aarch64.deb
+sudo reboot
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove –y
 ```
+
+
 
 ## Add Zigbee to MQTT
 - Add official Add-on: `Mosquitto broker`
